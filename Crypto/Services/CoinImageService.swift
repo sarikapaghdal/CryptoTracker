@@ -37,6 +37,9 @@ class CoinImageService {
         }
     }
     
+    /*saving downloaded image with
+        imageName = image id in "coin_images folder"*/
+    
     private func downloadCoinImage() {
         guard let url = URL(string: coin.image) else { return }
         
