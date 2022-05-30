@@ -62,7 +62,7 @@ extension HomeView {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
                 .onTapGesture {
-                    if showPortfolioView {
+                    if showPortfolio {
                         showPortfolioView.toggle()
                     }
                 }
