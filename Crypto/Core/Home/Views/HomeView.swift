@@ -60,7 +60,9 @@ extension HomeView {
     private var homeHeader: some View {
         HStack{
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
-                .animation(.none)
+                .transaction { transaction in
+                    transaction.animation = nil
+                }
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()

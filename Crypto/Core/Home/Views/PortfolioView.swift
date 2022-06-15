@@ -106,7 +106,9 @@ extension PortfolioView {
                 Text(getCurrentValue().asCurrencyWith2Decimals())
             }
         }
-        .animation(.none)
+        .transaction { transaction in
+            transaction.animation = nil
+        }
         .padding()
         .font(.headline)
     }
